@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Dzeriens {
 	
-	private int tilp;
+	private String tilp;
 	private ArrayList<String> dzerieni;
 	
 	public ArrayList<String> getDzeriens() {
@@ -15,11 +15,11 @@ public class Dzeriens {
 		this.dzerieni=dzerieni;
 	}
 	
-	public int getTilp() {
+	public String getTilp() {
 		return tilp;
 	}
 	
-	public void setTilp(int tilp) {
+	public void setTilp(String tilp) {
 		this.tilp=tilp;
 	}
 }
