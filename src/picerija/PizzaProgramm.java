@@ -22,6 +22,15 @@ public class PizzaProgramm {
 			Pizza pizza = new Pizza();
 			
 			ArrayList<String> toppings = new ArrayList<>();
+			
+			String picasIzmers;
+			picasIzmers=JOptionPane.showInputDialog("Izvelies picas izmeru - Liela, Videja, Maza: ");
+			
+			pizza.setSize(picasIzmers);
+			
+			int toppingsDaudzums=Integer.parseInt(JOptionPane.showInputDialog("Ievadi piedevu daudzumu: "));
+			
+			
 		}
 
 	}
