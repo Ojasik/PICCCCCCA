@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Pizza {
 	private String size;
-    private ArrayList<String> toppings;
+    private String toppings;
 
     public String getSize() {
         return size;
@@ -14,11 +14,11 @@ public class Pizza {
         this.size = size;
     }
 
-    public ArrayList<String> getToppings() {
+    public  String getToppings() {
         return toppings;
     }
 
-    public void setToppings(ArrayList<String> toppings) {
+    public void setToppings(String toppings) {
         this.toppings = toppings;
     }
 

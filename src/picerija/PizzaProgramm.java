@@ -75,14 +75,13 @@ public class PizzaProgramm {
 					        }
 				case "3":
 					Order order = new Order(pizzas, dzerieni, pizzas);
-					//order.orderPriceCalculation();
+					order.orderPriceCalculation();
 			        order.printOrderSummary();
 			    break;
 			    
 				case "2":
 					JOptionPane.showMessageDialog(null, "Pasutijums ir nosutits!");
-					Pizza pizza = null;
-					Dzeriens dzeriens = null;
+					
 				break;
 				
 				case "stop":
