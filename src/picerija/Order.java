@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Order {
+	String izvele;
 	private double totalOrderPrice;
 	private double totalPizza;
 	private double totalDzer;
@@ -128,12 +129,12 @@ public class Order {
 	
 	public void printOrderSummary() {
         for (Pizza pizza : pizzas) {
-            JOptionPane.showMessageDialog(null, "Pasutits " + pizza.getSize() + " pica ar " +    pizza.getToppings());
+            JOptionPane.showMessageDialog(null, "Pasutits "+pizza.getSize()+" pica ar "+pizza.getToppings());
         }
         for(Dzeriens dzeriens : dzerieni) {
-        	JOptionPane.showMessageDialog(null, "Pasutits " + dzeriens.getTilp() + " " +dzeriens.getDzeriens());
+        	JOptionPane.showMessageDialog(null, "Pasutits "+dzeriens.getTilp()+" "+dzeriens.getDzeriens());
         }
-        JOptionPane.showMessageDialog(null ,"KOPEJA PASUTIJUMA SUMMA: " + getTotalOrderPrice());
+        JOptionPane.showMessageDialog(null, "Kopeja pasutijuma summa: "+getTotalOrderPrice());
     }
 	
 
