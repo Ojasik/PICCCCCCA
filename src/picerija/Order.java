@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class Order {
+public class Order extends PizzaProgramm{
+	
 	String izvele;
 	private double totalOrderPrice;
 	private double totalPizza;
@@ -27,6 +28,7 @@ public class Order {
 	
 	
 	public void orderPriceCalculation() {
+		
 		final double LargeCost = 9.99;
 		final double MediumCost = 7.99;
 		final double SmallCost = 5.99;
@@ -87,7 +89,7 @@ public class Order {
 		}
 		//Nezinu ka konvertet ArrayList to String lai radas teksts nevis cipari
 		for(Pizza pizza : toppings) {
-			int totalToppings = pizza.getToppings().size();
+			int totalToppings = (pizza.getToppings()).size();
 			switch(pizza.getToppings().size()) {
 			case 1:
 				totalToppingsPrice += totalToppings * siers;
@@ -123,18 +125,29 @@ public class Order {
 		}
 		
 	}
+	
 	public double getTotalOrderPrice() {
 		return totalOrderPrice;
 	}
+
+		String adrese=JOptionPane.showInputDialog("Ievadi adrese: ");
+		String vards=JOptionPane.showInputDialog("Ievadi vardu: ");
+		String uzvards=JOptionPane.showInputDialog("Ievadi uzvardu: ");
+		String talrunis=JOptionPane.showInputDialog("Ievadi telefonu: ");
 	
 	public void printOrderSummary() {
+		
         for (Pizza pizza : pizzas) {
             JOptionPane.showMessageDialog(null, "Pasutits "+pizza.getSize()+" pica ar "+pizza.getToppings());
         }
         for(Dzeriens dzeriens : dzerieni) {
         	JOptionPane.showMessageDialog(null, "Pasutits "+dzeriens.getTilp()+" "+dzeriens.getDzeriens());
         }
-        JOptionPane.showMessageDialog(null, "Kopeja pasutijuma summa: "+getTotalOrderPrice());
+        
+        JOptionPane.showMessageDialog(null, "Adrese: "+adrese+"\nVards: "+vards+"\nUzvards: "+uzvards+"\nTalrunis: "+talrunis+"\nKopeja pasutijuma summa: "+getTotalOrderPrice());
+        
+        
+        
     }
 	
 
