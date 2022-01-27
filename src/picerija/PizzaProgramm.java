@@ -31,7 +31,7 @@ public class PizzaProgramm {
 			int toppingsDaudzums=Integer.parseInt(JOptionPane.showInputDialog("Ievadi piedevu daudzumu: "));
 			
 			for (int j = 0; j < toppingsDaudzums; j++) {
-				String topping = JOptionPane.showInputDialog("Izvelies piedevus - siers, bekons, ananasi, vistas fileja, malta gala, sampinjoni");
+				String topping = JOptionPane.showInputDialog("Izvelies piedevus -  1 - siers, 2 -bekons, 3 - ananasi, 4 - vistas fileja, 5 - malta gala, 6 - sampinjoni");
 				toppings.add(topping);
 			}
 			
@@ -57,13 +57,16 @@ public class PizzaProgramm {
 			dzeriens.setTilp(dzerTilp);
 			
 			
-			String dzerVeids = JOptionPane.showInputDialog("Izvelies dzerienu - Coca-Cola, Sprite, Fanta, Teja");
+			String dzerVeids = JOptionPane.showInputDialog("Izvelies dzerienu - Coca-Cola, Sprite, Fanta");
 			Veids.add(dzerVeids);
 			
 			dzeriens.setDzeriens(Veids);
 			dzerieni.add(dzeriens);
 			
 		}
+		Order order = new Order(pizzas, dzerieni, pizzas);
+        order.orderPriceCalculation();
+        order.printOrderSummary();
 
 	}
 
