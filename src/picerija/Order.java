@@ -84,20 +84,42 @@ public class Order {
 			
 			
 		}
-		
+		//Nezinu ka konvertet ArrayList to String lai radas teksts nevis cipari
 		for(Pizza pizza : toppings) {
 			int totalToppings = pizza.getToppings().size();
 			switch(pizza.getToppings().size()) {
 			case 1:
 				totalToppingsPrice += totalToppings * siers;
 				break;
+			case 2:
+				totalToppingsPrice += totalToppings * bekons;
+				break;
+			case 3:
+				totalToppingsPrice += totalToppings * ananasi;
+				break;
+			
+			case 4:
+				totalToppingsPrice += totalToppings * vistasfileja;
+				break;
 				
+			case 5:
+				totalToppingsPrice += totalToppings * maltagala;
+				break;
+				
+			case 6:
+				totalToppingsPrice += totalToppings * sampinjoni;
+				break;
 			}
 			
 		}
-		
-		totalOrderPrice=totalPizza+totalDzer+totalToppingsPrice;
-		
+		double piegade = 6.99;
+		String uzvietas = JOptionPane.showInputDialog("Vai velaties uzņemt uz vietas?(Ja, Ne)");
+		if (uzvietas.equals("Ja")) {
+			totalOrderPrice=totalPizza+totalDzer+totalToppingsPrice;
+		}
+		else if(uzvietas.equals("Ne")){
+		totalOrderPrice=totalPizza+totalDzer+totalToppingsPrice+piegade;
+		}
 		
 	}
 	public double getTotalOrderPrice() {
